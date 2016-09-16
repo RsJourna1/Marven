@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home</title>
+
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<link rel="stylesheet" type="text/css" href="css/navStyle.css" />
+		<style>
+		.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #fff;
+			}
+			
+			.cd-main-nav {
+				margin: 1px;
+			}
+		}
+		
+		.section .bg img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.section {
+			position: relative;
+			overflow: hidden;
+		}
+		.section h3 {
+			position: absolute;
+			left: 45%;
+			top: 5%;
+			z-index: 10;
+			width: 1000px;
+			height: 100px;
+			margin-left: -256px;
+			margin-top: 60px;
+			text-indent: -9999px;
+			background-repeat: no-repeat;
+			opacity: 0;
+			-webkit-transform: scale(0.5, 0.5);
+			transform: scale(0.5, 0.5);
+			transition: all 1s;
+		}
+		.section .bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.section .bg img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.bg21,
+		.bg22,
+		.bg23,
+		.bg24
+		{
+			position: absolute;
+			z-index: 1;
+			width: 208px;
+			left: 50%;
+			bottom: 20%;
+			padding-top: 210px;
+			color: #fff;
+		}
+		.section2 h3 {
+			background-image: url(img/scetion2h3.png);
+		}
+		.section2 h4 {
+			margin-bottom: 20px;
+			font-size: 30px;
+			font-weight: 500;
+			padding: 0px 0px 100px 0px;
+			margin-left: -30px
+		}
+		.section2 p {
+			font-size: 15px;
+		}
+		.bg11{/*调整a标签图片的位置*/
+			margin-left: -20px;
+			
+		}
+		
+		.bg21 {
+			margin-left: -430px;
+			/*background: transparent url(img/NEW.png) no-repeat scroll 30% 0px;*/
+			opacity: 0;
+			transition: all 1s;
+			padding-top: 150px;
+		}
+		.bg22 {
+			margin-left: -100px;
+			/*background: transparent url(img/Demographic.png) no-repeat scroll 30% 0px;*/
+			opacity: 0;
+			transition: all 1s ease 0s;
+			padding-top: 170px;
+		}
+		.bg23 {
+			margin-left: 280px;
+			/*background: url(img/guide.png) 30% 0 no-repeat;*/
+			opacity: 0;
+			transition: all 1s;
+			padding-top: 160px;
+		}
+		/*.bg24 {
+			margin-left: 645px;
+			background: url(img/Environment.png) 50% 0 no-repeat;
+			opacity: 0;
+			transition: all 1s;
+			padding-top: 200px;
+		}*/
+		.active .bg21 {
+			margin-left: -450px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		.active .bg22 {
+			margin-left: -100px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		.active .bg23 {
+			margin-left: 280px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		/*.active .bg24 {
+			margin-left: 345px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}*/
+		.active strong,
+		.active h3 {
+			opacity: 1;
+			-webkit-transform: scale(1, 1);
+			transform: scale(1, 1);
+			transition-delay: 0.7s;
+		}
+		
+		.ltie10 .bg21 {
+			margin-left: -450px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		.ltie10 .bg22 {
+			margin-left: -100px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		.ltie10 .bg23 {
+			margin-left: 290px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}
+		/*.ltie10 .bg24 {
+			margin-left: 345px;
+			opacity: 1;
+			transition-delay: 0.7s;
+		}*/
+		
+		.xiahuaxian :hover {
+				text-decoration: underline;
+				color: #FFFFFF;
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#dowebok').fullpage({
+					sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+				});
+			});
+			
+			/*$('.img').wrap(function(){
+                return '<a href="' + this.src + '" title="' + this.alt + '"></a>';
+            })*/
+		</script>
+	</head>
+
+	<body>
+		<header class="cd-main-header animate-search">
+
+			<nav class="cd-main-nav-wrapper">
+				<a href="Search.html" class="cd-search-trigger cd-text-replace">Search</a>
+
+				<ul class="cd-main-nav">
+					<li><a href="Home.html">Home</a></li>
+					<li><a href="Data.html">Data</a></li>
+					<li><a href="Analysis.html">Analysis</a></li>
+					<li><a href="Contact">Contact</a></li>
+				</ul>
+				<!-- .cd-main-nav -->
+			</nav>
+
+		</header>
+		<div id="dowebok">
+			<header class="cd-main-header animate-search">
+
+			</header>
+			
+			<div class="section section2">
+				<div class="bg"><img src="img/section2.jpg" alt=""></div>
+				<h3>Open Data on Chronic Disease</h3>
+				
+				
+				<div class="bg21">
+					<div class="bg11">
+						<a href="Home_Child.html#News"><img src="img/NEW.png" alt="">
+						</a>
+					</div>
+					<a href="Home_Child.html#News" class="xiahuaxian">
+					<h4>What's New</h4>
+					</a>
+				</div>
+				<div class="bg22">
+					<div class="bg11">
+						<a href="Home_Child.html#side-menu"><img src="img/Demographic.png" alt="">
+							
+						</a>
+					</div>
+					<a href="Home_Child.html#side-menu" class="xiahuaxian">
+					<h4>About Us</h4>
+					</a>
+				</div>
+				<div class="bg23">
+					<div class="bg11">
+						<a href="Home_Child.html#User Guide"><img src="img/guide.png" alt="">
+							
+						</a>
+					</div>
+					<a href="Home_Child.html#User Guide" class="xiahuaxian">
+					<h4>User Guide</h4>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+
+		</div>
+
+	</body>
+
+</html>

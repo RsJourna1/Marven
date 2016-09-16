@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusAgeGroupPopulation" table="cencus_age_group_population" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusAgeGroupPopulationPK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="b_TlPop" column="B_TlPop"/>
+        <property name="b_Age04Pop" column="B_Age0_4Pop"/>
+        <property name="b_Age59Pop" column="B_Age5_9Pop"/>
+        <property name="b_Age1014Pop" column="B_Age10_14Pop"/>
+        <property name="b_Age1519Pop" column="B_Age15_19Pop"/>
+        <property name="b_Age15Pop" column="B_Age15Pop"/>
+        <property name="b_Age16Pop" column="B_Age16Pop"/>
+        <property name="b_Age17Pop" column="B_Age17Pop"/>
+        <property name="b_Age18Pop" column="B_Age18Pop"/>
+        <property name="b_Age19Pop" column="B_Age19Pop"/>
+        <property name="b_Age2024Pop" column="B_Age20_24Pop"/>
+        <property name="b_Age2529Pop" column="B_Age25_29Pop"/>
+        <property name="b_Age3034Pop" column="B_Age30_34Pop"/>
+        <property name="b_Age3539Pop" column="B_Age35_39Pop"/>
+        <property name="b_Age4044Pop" column="B_Age40_44Pop"/>
+        <property name="b_Age4549Pop" column="B_Age45_49Pop"/>
+        <property name="b_Age5054Pop" column="B_Age50_54Pop"/>
+        <property name="b_Age5559Pop" column="B_Age55_59Pop"/>
+        <property name="b_Age6064Pop" column="B_Age60_64Pop"/>
+        <property name="b_Age6569Pop" column="B_Age65_69Pop"/>
+        <property name="b_Age7074Pop" column="B_Age70_74Pop"/>
+        <property name="b_Age7579Pop" column="B_Age75_79Pop"/>
+        <property name="b_Age8084Pop" column="B_Age80_84Pop"/>
+        <property name="b_AgeOver85Pop" column="B_AgeOver85Pop"/>
+        <property name="medianAgePop" column="MedianAgePop"/>
+        <property name="ageOver15Rate" column="AgeOver15Rate"/>
+        <property name="m_TlPop" column="M_TlPop"/>
+        <property name="m_Age04Pop" column="M_Age0_4Pop"/>
+        <property name="m_Age59Pop" column="M_Age5_9Pop"/>
+        <property name="m_Age1014Pop" column="M_Age10_14Pop"/>
+        <property name="m_Age1519Pop" column="M_Age15_19Pop"/>
+        <property name="m_Age2024Pop" column="M_Age20_24Pop"/>
+        <property name="m_Age2529Pop" column="M_Age25_29Pop"/>
+        <property name="m_Age3034Pop" column="M_Age30_34Pop"/>
+        <property name="m_Age3539Pop" column="M_Age35_39Pop"/>
+        <property name="m_Age4044Pop" column="M_Age40_44Pop"/>
+        <property name="m_Age4549Pop" column="M_Age45_49Pop"/>
+        <property name="m_Age5054Pop" column="M_Age50_54Pop"/>
+        <property name="m_Age5559Pop" column="M_Age55_59Pop"/>
+        <property name="m_Age6064Pop" column="M_Age60_64Pop"/>
+        <property name="m_Age6569Pop" column="M_Age65_69Pop"/>
+        <property name="m_Age7074Pop" column="M_Age70_74Pop"/>
+        <property name="m_Age7579Pop" column="M_Age75_79Pop"/>
+        <property name="m_Age8084Pop" column="M_Age80_84Pop"/>
+        <property name="m_AgeOver85Pop" column="M_AgeOver85Pop"/>
+        <property name="f_TlPop" column="F_TlPop"/>
+        <property name="f_Age04Pop" column="F_Age0_4Pop"/>
+        <property name="f_Age59Pop" column="F_Age5_9Pop"/>
+        <property name="f_Age1014Pop" column="F_Age10_14Pop"/>
+        <property name="f_Age1519Pop" column="F_Age15_19Pop"/>
+        <property name="f_Age2024Pop" column="F_Age20_24Pop"/>
+        <property name="f_Age2529Pop" column="F_Age25_29Pop"/>
+        <property name="f_Age3034Pop" column="F_Age30_34Pop"/>
+        <property name="f_Age3539Pop" column="F_Age35_39Pop"/>
+        <property name="f_Age4044Pop" column="F_Age40_44Pop"/>
+        <property name="f_Age4549Pop" column="F_Age45_49Pop"/>
+        <property name="f_Age5054Pop" column="F_Age50_54Pop"/>
+        <property name="f_Age5559Pop" column="F_Age55_59Pop"/>
+        <property name="f_Age6064Pop" column="F_Age60_64Pop"/>
+        <property name="f_Age6569Pop" column="F_Age65_69Pop"/>
+        <property name="f_Age7074Pop" column="F_Age70_74Pop"/>
+        <property name="f_Age7579Pop" column="F_Age75_79Pop"/>
+        <property name="f_Age8084Pop" column="F_Age80_84Pop"/>
+        <property name="f_AgeOver85Pop" column="F_AgeOver85Pop"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusImmigrantsMobility" table="census_immigrants_mobility" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusImmigrantsMobilityPK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlPop5YMobi" column="TlPop_5YMobi"/>
+        <property name="non5YmoversPop" column="Non_5YmoversPop"/>
+        <property name="movers5YPop" column="Movers5YPop"/>
+        <property name="nonMigrants5YPop" column="Non_migrants5YPop"/>
+        <property name="migrants5YPop" column="Migrants5YPop"/>
+        <property name="interMigrants5YPop" column="Inter_migrants5YPop"/>
+        <property name="intraMigrants5YPop" column="Intra_migrants5YPop"/>
+        <property name="interproMigrants5YPop" column="Interpro_migrants5YPop"/>
+        <property name="exterMigrants5YPop" column="Exter_migrants5YPop"/>
+        <property name="tlPop1YMobi" column="TlPop_1YMobi"/>
+        <property name="non1YmoversPop" column="Non_1YmoversPop"/>
+        <property name="movers1YPop" column="Movers1YPop"/>
+        <property name="nonMigrants1YPop" column="Non_migrants1YPop"/>
+        <property name="migrants1YPop" column="Migrants1YPop"/>
+        <property name="interMigrants1YPop" column="Inter_migrants1YPop"/>
+        <property name="intraMigrants1YPop" column="Intra_migrants1YPop"/>
+        <property name="interproMigrants1YPop" column="Interpro_migrants1YPop"/>
+        <property name="exterMigrants1YPop" column="Exter_migrants1YPop"/>
+    </class>
+</hibernate-mapping>

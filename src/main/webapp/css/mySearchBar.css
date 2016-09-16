@@ -1,0 +1,44 @@
+			.myTitle {
+				overflow: hidden;
+				padding-top: 40px;
+				padding-bottom: 32px;
+				font-family: "΢���ź�";
+				margin-top: 150px;
+				margin-right: 400px;
+				margin-bottom: 0;
+				margin-left: 600px;
+				width: 305px;
+				height: 18px;
+				font-size: 24px;
+			}
+			
+
+			
+			input {
+				vertical-align: middle
+			}
+			/*search*/
+			
+			.search {
+				width: 616px;
+				height: auto;
+				overflow: hidden;
+				margin-top: 0;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: auto;
+			}
+			
+			.searchInput {
+				border: 1px solid #8cbef1;
+				width: 600px;
+				height: 39px;
+				line-height: 40px;
+				padding-left: 5px;
+			}
+			
+			.searchKey {
+				color: #adadad;
+				font-size: 14px;
+				font-family: "΢���ź�";
+			}

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodCategoryPopulation" table="neighborhood_categorypopulation" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodCategoryPopulationPK">
+            <key-property name="ctYear" column="CT_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="tlNdPop" column="TlNdPop"/>
+        <property name="tlMNdPop" column="Tl_M_NdPop"/>
+        <property name="tlF_NdPop" column="Tl_F_NdPop"/>
+        <property name="agegroup04NdPop" column="Agegroup0_4NdPop"/>
+        <property name="agegroup59NdPop" column="Agegroup5_9NdPop"/>
+        <property name="agegroup1014NdPop" column="Agegroup10_14NdPop"/>
+        <property name="agegroup1519NdPop" column="Agegroup15_19NdPop"/>
+        <property name="agegroup2024NdPop" column="Agegroup20_24NdPop"/>
+        <property name="agegroup2529NdPop" column="Agegroup25_29NdPop"/>
+        <property name="agegroup3034NdPop" column="Agegroup30_34NdPop"/>
+        <property name="agegroup3539NdPop" column="Agegroup35_39NdPop"/>
+        <property name="agegroup4044NdPop" column="Agegroup40_44NdPop"/>
+        <property name="agegroup4549NdPop" column="Agegroup45_49NdPop"/>
+        <property name="agegroup5054NdPop" column="Agegroup50_54NdPop"/>
+        <property name="agegroup5559NdPop" column="Agegroup55_59NdPop"/>
+        <property name="agegroup6064NdPop" column="Agegroup60_64NdPop"/>
+        <property name="agegroup6569NdPop" column="Agegroup65_69NdPop"/>
+        <property name="agegroup7074NdPop" column="Agegroup70_74NdPop"/>
+        <property name="agegroup7579NdPop" column="Agegroup75_79NdPop"/>
+        <property name="agegroup8084NdPop" column="Agegroup80_84NdPop"/>
+        <property name="agegroup85OverNdPop" column="Agegroup85OverNdPop"/>
+        <property name="agegroup612NdPop" column="Agegroup6_12NdPop"/>
+        <property name="childAge014NdPop" column="ChildAge0_14NdPop"/>
+        <property name="youthAge1524NdPop" column="YouthAge15_24NdPop"/>
+        <property name="senior55OverNdPop" column="Senior55OverNdPop"/>
+        <property name="senior65OverNdPop" column="Senior65OverNdPop"/>
+        <property name="seniorLiveAloneNdPop" column="SeniorLiveAloneNdPop"/>
+    </class>
+</hibernate-mapping>

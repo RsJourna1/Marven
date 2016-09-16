@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusIncome" table="census_income" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusIncomePK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlIn2010AgeOver15" column="TlIn2010AgeOver15"/>
+        <property name="noInPop" column="No_InPop"/>
+        <property name="w_InPop" column="W_InPop"/>
+        <property name="under5000UsdPop" column="Under5000USD_Pop"/>
+        <property name="usd5000_9999Pop" column="5000_9999USD_Pop"/>
+        <property name="usd10000_14999Pop" column="10000_14999USD_Pop"/>
+        <property name="usd15000_19999Pop" column="15000_19999USD_Pop"/>
+        <property name="usd20000_29999Pop" column="20000_29999USD_Pop"/>
+        <property name="usd30000_39999Pop" column="30000_39999USD_Pop"/>
+        <property name="usd40000_49999Pop" column="40000_49999USD_Pop"/>
+        <property name="usd50000_59999Pop" column="50000_59999USD_Pop"/>
+        <property name="usd60000_79999Pop" column="60000_79999USD_Pop"/>
+        <property name="usd80000_99999Pop" column="80000_99999USD_Pop"/>
+        <property name="over100000UsdPop" column="Over100000USD_Pop"/>
+        <property name="usd100000_124999Pop" column="100000_124999USD_Pop"/>
+        <property name="over125000UsdPop" column="Over125000USD_Pop"/>
+        <property name="medInStdUsdMon" column="MedInStdUSD_Mon"/>
+        <property name="avgInStdUsdMon" column="AvgInStdUSD_Mon"/>
+        <property name="tolInStdUsDmilMon" column="TolInStdUSDmil_Mon"/>
+        <property name="afTaxTlIn2010AgeOver15" column="AfTax_TlIn2010AgeOver15"/>
+        <property name="afTaxNoInPop" column="AfTax_No_InPop"/>
+        <property name="afTaxWInPop" column="AfTax_W_InPop"/>
+        <property name="afTaxUnder5000UsdPop" column="AfTaxUnder5000USD_Pop"/>
+        <property name="afTax50009999UsdPop" column="AfTax5000_9999USD_Pop"/>
+        <property name="afTax1000014999UsdPop" column="AfTax10000_14999USD_Pop"/>
+        <property name="afTax1500019999UsdPop" column="AfTax15000_19999USD_Pop"/>
+        <property name="afTax2000029999UsdPop" column="AfTax20000_29999USD_Pop"/>
+        <property name="afTax3000039999UsdPop" column="AfTax30000_39999USD_Pop"/>
+        <property name="afTax4000049999UsdPop" column="AfTax40000_49999USD_Pop"/>
+        <property name="afTax5000059999UsdPop" column="AfTax50000_59999USD_Pop"/>
+        <property name="afTax6000079999UsdPop" column="AfTax60000_79999USD_Pop"/>
+        <property name="afTax8000099999UsdPop" column="AfTax80000_99999USD_Pop"/>
+        <property name="afTaxOver100000UsdPop" column="AfTaxOver100000USD_Pop"/>
+        <property name="afTaxMedInStdUsdMon" column="AfTaxMedInStdUSD_Mon"/>
+        <property name="afTaxAvgInStdUsdMon" column="AfTaxAvgInStdUSD_Mon"/>
+        <property name="afTaxTolInStdUsDmilMon" column="AfTaxTolInStdUSDmil_Mon"/>
+    </class>
+</hibernate-mapping>

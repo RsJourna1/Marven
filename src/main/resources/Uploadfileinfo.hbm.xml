@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.Uploadfileinfo" table="uploadfileinfo" schema="chronic">
+        <composite-id mapped="true" class="com.entity.UploadfileinfoPK">
+            <key-property name="fileUploadDate" column="fileUploadDate"/>
+            <key-property name="upLoadFileName" column="upLoadFileName"/>
+            <key-property name="upLoadContentType" column="upLoadContentType"/>
+        </composite-id>
+        <property name="fileUploadOperator" column="fileUploadOperator"/>
+        <property name="title" column="title"/>
+        <property name="fileDataSource" column="fileDataSource"/>
+        <property name="fileDataYear" column="fileDataYear"/>
+        <property name="fileDataCategory" column="fileDataCategory"/>
+        <property name="fileDataMainClass" column="fileDataMainClass"/>
+        <property name="fileDataSubClass" column="fileDataSubClass"/>
+    </class>
+</hibernate-mapping>

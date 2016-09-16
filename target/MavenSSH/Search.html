@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Search</title>
+
+		<link rel="stylesheet" type="text/css" href="css/buttonsFromBootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/mySearchBar.css" />
+		<link rel="stylesheet" type="text/css" href="css/navStyle.css" />
+		<link rel="stylesheet" type="text/css" href="css/mySelect.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer.css" />
+		<style type="text/css">
+			.myContainer {
+				display: none;
+				margin-left: 140px;
+				margin-top: 25px;
+			}
+			.a:focus, a:hover
+			{
+				color:#FFFFFF
+			}
+			.btn-advance {
+				margin-left: 5px!important;
+			}
+			
+			.cd-main-nav {
+				margin: 1px;
+			}
+			
+			.cd-main-nav li {
+				display: inline-block;
+				float: left;
+				height: 100%;
+				padding: 1.22em 0.4em;
+			}
+			
+			.selected dd,
+			.select-list dd {
+				line-height: 1.95!important;
+			}
+			
+			.my-button-go {
+				font-size: 20px;
+				height: 50px;
+				line-height: 50px;
+				padding: 0px 0px;
+				width: 90px;
+				color: #EEEEEE;
+				background-color: rgb(24, 166, 137);
+				display: inline-block;
+				border-radius: 0px;
+			}
+			
+			.my-button-more {
+				font-size: 20px;
+				height: 50px;
+				line-height: 50px;
+				padding: 0px 0px;
+				width: 532px;
+				margin-left: -60px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="cd-main-header animate-search">
+			<nav class="cd-main-nav-wrapper">
+				<a href="Search.html" class="cd-search-trigger cd-text-replace">Search</a>
+
+				<ul class="cd-main-nav">
+					<li><a href="Home.html" class="aaa">Home</a></li>
+					<li><a href="Data.html" class="aaa">Data</a></li>
+					<li><a href="Analysis.html" class="aaa">Analysis</a></li>
+					<li><a href="Contact" class="aaa">Contact</a></li>
+				</ul>
+				<!-- .cd-main-nav -->
+			</nav>
+
+		</header>
+		<div class="searchBar">
+			<div class="myTitle" id="divMyTitle">Search</div>
+			<!--search-->
+
+			<div class="search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="please input keywords here">
+					<span class="input-group-btn"> 
+							<button type="button" class="btn btn-primary" onclick="toResult()">Go</button>
+							<button type="button" class="btn btn-primary btn-advance" id="btnAdvanceSearch" onclick="toAdvanceSearch()">+Advanced Search</button>
+						</span>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!--search end-->
+
+		</div>
+
+		<div class="myContainer" id="divContainer">
+
+			<div class="mySelect">
+				<ul class="select selected" id="ul_select">
+					<li class="select-list">
+						<dl id="select1" class="dl">
+							<dt>Data Sources：</dt>
+							<dd class="select-all selected"><a href="#">All</a></dd>
+							<dd><a href="#">Toronto public health</a></dd>
+							<dd><a href="#">Canada census</a></dd>
+							<dd><a href="#">Canada national household survey</a></dd>
+							<dd><a href="#">Urban HEART@Toronto</a></dd>
+							<dd><a href="#">Toronto public health&Toronto food strategy</a></dd>
+							<dd><a href="#">Walk Score</a></dd>
+							<dd><a href="#">City of Toronto</a></dd>
+							<dd><a href="#">ChemTRAC</a></dd>
+							<dd><a href="#">CBC Toronto</a></dd>
+							<dd><a href="#">Toronto Community Housing Corporation</a></dd>
+							<dd><a href="#">Well being</a></dd>
+							<dd><a href="#">Ontario Ministry of Health and Long-Term Care</a></dd>
+						</dl>
+					</li>
+
+					<li class="select-list">
+						<dl id="select2" class="dl">
+							<dt>Year：</dt>
+							<dd class="select-all selected"><a href="#">All</a></dd>
+							<dd><a href="#">2007</a></dd>
+							<dd><a href="#">2008</a></dd>
+							<dd><a href="#">2009</a></dd>
+							<dd><a href="#">2010</a></dd>
+							<dd><a href="#">2011</a></dd>
+						</dl>
+					</li>
+					<li class="select-list">
+						<dl id="select3" class="dl">
+							<dt>Geographic：</dt>
+							<dd class="select-all selected"><a href="#">All</a></dd>
+							<dd><a href="#">census tracts</a></dd>
+							<dd><a href="#">neighborhoods</a></dd>
+							<dd><a href="#">city</a></dd>
+						</dl>
+					</li>
+					<li class="select-result">
+						<dl id="dl_result">
+							<dt>已选条件：</dt>
+							<dd class="select-no">暂时没有选择搜索条件</dd>
+						</dl>
+					</li>
+
+				</ul>
+				<div class="my-btn">
+					<a href="javascript:;" class="button button-block button-rounded button-large my-button-more"  id="button-more">+Select Indicators</a>
+					<a href="javascript:;" class="button button-block button-rounded button-large my-button-go" onclick="toResult()">Go</a>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script src="js/JsAdvanceSearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/btnToAdvanceSearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#button-more').on('click', function() {
+			layer.open({
+				title: 'Select Indicators',
+				type: 2,
+				//maxmin: true,
+				area: ['590px', '650px'],
+				fix: false, //不固定
+				shadeClose: true,
+				content: 'childSearch.html'
+			})
+		});
+	</script>
+
+</html>

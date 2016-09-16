@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodLabourforce" table="neighborhood_labourforce" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodLabourforcePK">
+            <key-property name="ctYear" column="CT_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="tlLabourforceNdPop" column="Tl_Labourforce_NdPop"/>
+        <property name="inLabourforceNdPop" column="InLabourforce_NdPop"/>
+        <property name="unemployedNdPop" column="Unemployed_NdPop"/>
+        <property name="notInLabourforceNdPop" column="NotInLabourforce_NdPop"/>
+        <property name="lessThanGrade9NdPop" column="LessThanGrade9_NdPop"/>
+    </class>
+</hibernate-mapping>

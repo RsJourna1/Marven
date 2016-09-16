@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>AdvanceSearchResult</title>
+
+		<link rel="stylesheet" type="text/css" href="css/navStyle.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style>
+			.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #fff;
+			}
+			
+			.cd-main-nav {
+				margin: 1px;
+			}
+			
+			.my-panel-default {
+				display: inline-block;
+				width: 620px;
+				margin-top: 32px;
+				margin-left: -200px;
+			}
+			.my-panel-left{
+				width: 120px;
+			}
+			.my-panel-body{
+				width: 120px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="cd-main-header animate-search">
+
+			<nav class="cd-main-nav-wrapper">
+				<a href="Search.html" class="cd-search-trigger cd-text-replace">Search</a>
+
+				<ul class="cd-main-nav">
+					<li><a href="Home.html">Home</a></li>
+					<li><a href="Data.html">Data</a></li>
+					<li><a href="Analysis.html">Analysis</a></li>
+					<li><a href="Contact">Contact</a></li>
+				</ul>
+				<!-- .cd-main-nav -->
+			</nav>
+		</header>
+
+		<div class="col-sm-4" style="display: inline-block;">
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+					<font style="40px;">result</font>
+				</div>
+				<div class="ibox-content no-padding">
+					<div class="panel-body my-panel-body">
+						<div class="panel-group my-panel-group" id="version">
+							<div class="panel panel-default my-panel-left">
+								<div class="panel-heading">
+									<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v41">1</a><code class="pull-right">条件1</code>
+                                            </h5>
+								</div>
+
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v40">2</a><code class="pull-right">条件2</code>
+                                            </h5>
+									</div>
+									<div id="v40" class="panel-collapse collapse">
+										<div class="panel-body">
+
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v32">3</a><code class="pull-right">条件3</code>
+                                            </h5>
+									</div>
+									<div id="v32" class="panel-collapse collapse">
+										<div class="panel-body">
+
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v31">4</a><code class="pull-right">条件4</code>
+                                            </h5>
+									</div>
+									<div id="v31" class="panel-collapse collapse">
+										<div class="panel-body">
+
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#version" href="#v301">5</a><code class="pull-right">条件5</code>
+                                            </h5>
+									</div>
+									<div id="v301" class="panel-collapse collapse">
+
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v30">6</a><code class="pull-right">条件6</code>
+                                            </h5>
+									</div>
+									<div id="v30" class="panel-collapse collapse">
+										<div class="panel-body">
+
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h5 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#version" href="#v22">7</a><code class="pull-right">条件7</code>
+                                            </h5>
+									</div>
+									<div id="v22" class="panel-collapse collapse">
+										<div class="panel-body">
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default my-panel-default" id="my-panel-default">
+			<!-- Default panel contents -->
+
+			<!-- Table -->
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Default
+						</td>
+					</tr>
+					<tr class="success">
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Approved
+						</td>
+					</tr>
+					<tr class="error">
+						<td>
+							2
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						<td>
+							Declined
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							3
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+						<td>
+							Pending
+						</td>
+					</tr>
+					<tr class="info">
+						<td>
+							4
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							04/04/2012
+						</td>
+						<td>
+							Call in to confirm
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</body>
+
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

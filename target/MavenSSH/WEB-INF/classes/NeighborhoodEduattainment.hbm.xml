@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodEduattainment" table="neighborhood_eduattainment" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodEduattainmentPK">
+            <key-property name="ctYear" column="CT_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="withCollCertificateDiplomaNdPop" column="WithCollCertificate_Diploma_NdPop"/>
+        <property name="withBachelorDegreeHigher" column="WithBachelorDegreeHigher"/>
+    </class>
+</hibernate-mapping>

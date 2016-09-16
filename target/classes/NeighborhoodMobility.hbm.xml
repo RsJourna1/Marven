@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodMobility" table="neighborhood_mobility" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodMobilityPK">
+            <key-property name="ctYear" column="CT_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="tlMobilityNdPop" column="Tl_Mobility_NdPop"/>
+        <property name="nonMoversNdPop" column="Non_Movers_NdPop"/>
+        <property name="moversNdPop" column="Movers_NdPop"/>
+        <property name="tlRecImmiNdPop" column="Tl_RecImmi_NdPop"/>
+        <property name="recImmiNdPop" column="RecImmi_NdPop"/>
+        <property name="southerAsiaImmiNdPop" column="SoutherAsiaImmi_NdPop"/>
+        <property name="southEastAsiaImmiNdPop" column="SouthEastAsiaImmi_NdPop"/>
+        <property name="easternAsiaImmiNdPop" column="EasternAsiaImmi_NdPop"/>
+        <property name="westAsiaMiddleEastImmiNdPop" column="WestAsia_MiddleEastImmi_NdPop"/>
+        <property name="africaImmiNdPop" column="AfricaImmi_NdPop"/>
+        <property name="europeImmiNdPop" column="EuropeImmi_NdPop"/>
+        <property name="caribbeCentralSAmericaImmiNdPop" column="Caribbe_Central_SAmericaImmi_NdPop"/>
+    </class>
+</hibernate-mapping>

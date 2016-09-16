@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodMinority" table="neighborhood_minority" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodMinorityPK">
+            <key-property name="ctYear" column="CT_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="tlVisibleMinorityNdPop" column="TlVisible_minorityNdPop"/>
+        <property name="chineseNdPop" column="Chinese_NdPop"/>
+        <property name="southAsianNdPop" column="SouthAsian_NdPop"/>
+        <property name="blackNdPop" column="Black_NdPop"/>
+        <property name="filipinoNdPop" column="Filipino_NdPop"/>
+        <property name="latinAmericanNdPop" column="LatinAmerican_NdPop"/>
+        <property name="southeastAsianNdPop" column="SoutheastAsian_NdPop"/>
+        <property name="arabNdPop" column="Arab_NdPop"/>
+        <property name="westAsianNdPop" column="WestAsian_NdPop"/>
+        <property name="koreanNdPop" column="Korean_NdPop"/>
+        <property name="japaneseNdPop" column="Japanese_NdPop"/>
+        <property name="otherVisibleMinorityNdPop" column="Other_Visible_Minority_NdPop"/>
+        <property name="multipleVisibleMinorityNdPop" column="Multiple_Visible_Minority_NdPop"/>
+        <property name="noVisibleMinorityNdTPop" column="No_Visible_Minority_NdTPop"/>
+        <property name="aboriginalNdPop" column="Aboriginal_NdPop"/>
+        <property name="tlHomeLanguageNdTPop" column="Tl_HomeLanguage_NdTPop"/>
+        <property name="lanChineseNdPop" column="lanChinese_NdPop"/>
+        <property name="lanItalianNdPop" column="lanItalian_NdPop"/>
+        <property name="lanKoreanNdPop" column="lanKorean_NdPop"/>
+        <property name="lanPersianFarsiNdPop" column="lan_Persian_Farsi_NdPop"/>
+        <property name="lanPortugueseNdPop" column="lanPortuguese_NdPop"/>
+        <property name="lanRussianNdPop" column="lanRussian_NdPop"/>
+        <property name="lanSpanishNdPop" column="lanSpanish_NdPop"/>
+        <property name="lanTagalogNdPop" column="lanTagalog_NdPop"/>
+        <property name="lanTamilNdPop" column="lanTamil_NdPop"/>
+        <property name="lanUrduNdPop" column="lanUrdu_NdPop"/>
+    </class>
+</hibernate-mapping>

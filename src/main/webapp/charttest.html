@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>childData</title>
+
+		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<!--
+        	作者：415860408@qq.com
+        	时间：2016-04-12
+        	描述：
+        -->
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<!--
+        	作者：415860408@qq.com
+        	时间：2016-04-13
+        	描述：
+        -->
+		<link href="css/style.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<!--<link href="css/font-awesome.css" rel="stylesheet">-->
+
+		<link href="css/animate.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div class="container">
+			<section>
+				<div class="tabs tabs-style-bar">
+					<nav>
+						<ul>
+							<li><a href="#section-bar-1" class="icon icon-home"><span>MetaData</span></a></li>
+							<li><a href="#section-bar-2" class="icon icon-box"><span>Data</span></a></li>
+							<li><a href="#section-bar-3" class="icon icon-display"><span>Visualization</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-bar-1">
+							<p>AAA</p>
+						</section>
+						<section id="section-bar-2">
+
+							<p>BBB</p>
+
+						</section>
+						<section id="section-bar-3">
+							<div id="my-echart" style="width: 600px; height: 300px;"></div>
+							<div id="my-echart-bar" style="width: 600px;height: 300px;">
+
+							</div>
+						</section>
+					</div>
+					<!-- /content -->
+				</div>
+				<!-- /tabs -->
+			</section>
+
+		</div>
+		<!-- /container -->
+
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+					new CBPFWTabs(el);
+				});
+			})();
+		</script>
+
+		<!--
+        	作者：415860408@qq.com
+        	时间：2016-04-13
+        	描述：tubiao 
+        -->
+
+		<script src="js/bootstrap.min.js"></script>
+		<!-- ECharts -->
+		<script src="js/echarts-all.js"></script>
+
+		<!-- ECharts demo data -->
+
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('my-echart'));
+			var myBarChart = echarts.init(document.getElementById('my-echart-bar'));
+			var option = {
+				title: {
+					text: '某站点用户访问来源',
+					subtext: '纯属虚构',
+					x: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					x: 'left',
+					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+				},
+				calculable: true,
+				series: [{
+					name: '访问来源',
+					type: 'pie',
+					radius: '55%',
+					center: ['50%', '60%'],
+					data: [{
+						value: 335,
+						name: '直接访问'
+					}, {
+						value: 310,
+						name: '邮件营销'
+					}, {
+						value: 234,
+						name: '联盟广告'
+					}, {
+						value: 135,
+						name: '视频广告'
+					}, {
+						value: 1548,
+						name: '搜索引擎'
+					}]
+				}]
+			};
+			
+			
+			var barOption = {
+				title: {
+					text: 'ECharts 入门示例'
+				},
+				tooltip: {},
+				legend: {
+					data: ['销量']
+				},
+				xAxis: {
+					data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+				},
+				yAxis: {},
+				series: [{
+					name: '销量',
+					type: 'bar',
+					data: [5, 20, 36, 10, 10, 20]
+				}]
+			};
+			
+			
+			myChart.setOption(option);
+			myBarChart.setOption(barOption);
+		</script>
+	</body>
+
+</html>

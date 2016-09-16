@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.Indicator" table="indicator" schema="chronic">
+        <id name="fieldName" column="FieldName"/>
+        <property name="dataSource" column="DataSource"/>
+        <property name="category" column="Category"/>
+        <property name="mainClass" column="Main_Class"/>
+        <property name="subClass" column="Sub_Class"/>
+        <property name="year" column="Year"/>
+        <property name="description" column="Description"/>
+        <property name="entityName" column="EntityName"/>
+        <property name="tablename" column="Tablename"/>
+        <property name="definition" column="Definition"/>
+        <property name="entityIdentity" column="EntityIdentity"/>
+        <property name="entityAlias" column="EntityAlias"/>
+    </class>
+</hibernate-mapping>

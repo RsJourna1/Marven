@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusImmigrantsPeriod" table="census_immigrants_period" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusImmigrantsPeriodPK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlPopPeriodImmi" column="TlPop_PeriodImmi"/>
+        <property name="nonImmigrantsPopPeriod" column="Non_ImmigrantsPop_Period"/>
+        <property name="immigrantsPopPeriod" column="ImmigrantsPop_Period"/>
+        <property name="before1961Pop" column="Before1961Pop"/>
+        <property name="imi1961_1970Pop" column="1961_1970Pop"/>
+        <property name="before1971Pop" column="Before1971Pop"/>
+        <property name="imi1971_1980Pop" column="1971_1980Pop"/>
+        <property name="imi1981_1990Pop" column="1981_1990Pop"/>
+        <property name="imi1991_1995Pop" column="1991_1995Pop"/>
+        <property name="imi1996_2000Pop" column="1996_2000Pop"/>
+        <property name="imi1991_2000Pop" column="1991_2000Pop"/>
+        <property name="imi2001_2006Pop" column="2001_2006Pop"/>
+        <property name="imi2001_2011Pop" column="2001_2011Pop"/>
+        <property name="imi2001_2005Pop" column="2001_2005Pop"/>
+        <property name="imi20062011Pop" column="2006_2011Pop"/>
+        <property name="nonPermanentRePopPeriod" column="Non_permanentRePop_Period"/>
+    </class>
+</hibernate-mapping>

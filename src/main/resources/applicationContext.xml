@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+       <!--配置数据源-->
+       <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+              <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+              <property name="url" value="jdbc:mysql://localhost:3306/chronic"></property>
+              <property name="username" value="root"></property>
+              <property name="password" value="zxh980278090"></property>
+              <property name="maxActive" value="100"></property>
+              <property name="defaultAutoCommit" value="true"></property>
+       </bean>
+
+       <!--配置sessionFactory-->
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+              <property name="dataSource" ref="dataSource"></property>
+              <property name="hibernateProperties">
+                     <props>
+                            <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                            <prop key="hibernate.show_sql">true</prop>
+                            <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/chronic</prop>
+                            <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+                     </props>
+              </property>
+
+              <property name="mappingResources">
+                     <list>
+                            <value>User.hbm.xml</value>
+                            <value>Uploadfileinfo.hbm.xml</value>
+                            <value>Neighborhood.hbm.xml</value>
+                            <value>Indicator.hbm.xml</value>
+                            <value>NeighborhoodDiabetesPrevalence.hbm.xml</value>
+                            <value>CencusAgeGroupPopulation.hbm.xml</value>
+                            <value>NeighborhoodMinority.hbm.xml</value>
+                            <value>NeighborhoodCategorypopulation.hbm.xml</value>
+                            <value>CensusTract.hbm.xml</value>
+                            <value>CensusEducationalAttainment.hbm.xml</value>
+                            <value>CensusImmigrantsAge.hbm.xml</value>
+                            <value>CensusImmigrantsMobility.hbm.xml</value>
+                            <value>CensusImmigrantsPeriod.hbm.xml</value>
+                            <value>CensusIncome.hbm.xml</value>
+                            <value>CensusMaritalStatus.hbm.xml</value>
+                            <value>NeighborhoodEduattainment.hbm.xml</value>
+                            <value>NeighborhoodIncome.hbm.xml</value>
+                            <value>NeighborhoodLabourforce.hbm.xml</value>
+                            <value>NeighborhoodMobility.hbm.xml</value>
+                     </list>
+              </property>
+       </bean>
+
+       <!--使用注解配置事务管理-->
+       <context:annotation-config/>
+       <!--使用注解的包路径-->
+       <context:component-scan base-package="dao"/>
+       <!--支持@Transactional 标记-->
+       <tx:annotation-driven transaction-manager="transactionManager"/>
+       <!--定义事务管理器-->
+       <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+              <property name="sessionFactory" ref="sessionFactory" />
+       </bean>
+
+       <!--对象进行容器托管-->
+       <!--user-->
+       <bean id="userDao" class="dao.impl.UserDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+       </bean>
+
+       <bean id="userService" class="service.impl.UserServiceImpl">
+              <property name="userDao" ref="userDao"/>
+       </bean>
+
+       <bean id="userAction" class="action.UserAction">
+              <property name="userService" ref="userService"/>
+       </bean>
+       <!--uploadFile-->
+       <bean id="uploadFileInfoDao" class="dao.impl.UploadFileInfoDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+       </bean>
+       <bean id="uploadFileInfoService" class="service.impl.UploadFileInfoServiceImpl">
+              <property name="uploadFileInfoDao" ref="uploadFileInfoDao"/>
+       </bean>
+       <bean id="uploadfileAction" class="action.UpLoadFileAction">
+              <property name="uploadFileInfoService" ref="uploadFileInfoService"/>
+       </bean>
+       <!--IndicatorDesc-->
+       <bean id="indicatorDescDao" class="dao.impl.IndicatorDescDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+        </bean>
+       <bean id="indicatorDescService" class="service.impl.IndicatorDescServiceImpl">
+              <property name="indicatorDescDao" ref="indicatorDescDao"/>
+       </bean>
+       <!--BrowseChrDiePre-->
+       <bean id="browseChrDiePreDao" class="dao.impl.BrowseByPageDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+       </bean>
+       <bean id="browseChrDiePreService" class="service.impl.BrowseChrDiePreServiceImpl">
+              <property name="browseByPageDao" ref="browseChrDiePreDao"/>
+       </bean>
+       <!--BrowseDemographic-->
+       <bean id="browseByPageDao" class="dao.impl.BrowseByPageDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+       </bean>
+       <bean id="browseDemographicService" class="service.impl.BrowseDemographicServiceImpl">
+              <property name="browseByPageDao" ref="browseByPageDao"/>
+        </bean>
+       <!--test-->
+       <bean id="browseDao" class="dao.impl.BrowseByPageDaoImpl" scope="singleton">
+              <property name="sessionFactory">
+                     <ref bean="sessionFactory"/>
+              </property>
+       </bean>
+       <bean id="browseService" class="service.impl.BrowseServiceImpl">
+              <property name="browseDao" ref="browseDao"/>
+       </bean>
+</beans>

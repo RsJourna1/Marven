@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!--设置应用使用的字符集-->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!--文件上传临时保存地址-->
+    <constant name="struts.multipart.saveDir" value="E:\\创新实践\uploadFiles\temp"/>
+    <!--项目文件上传表单请求内容最大字节数，当前配置1G-->
+    <constant name="struts.multipart.maxSize" value="1073741824"/>
+    <package name="Maven_SSH" extends="struts-default" namespace="/">
+
+        <!--登录-->
+        <action name="login" class="action.UserAction" method="login">
+            <result name="success">/WEB-INF/content/Data.jsp</result>
+            <result name="fail">/WEB-INF/content/loginfail.jsp</result>
+        </action>
+
+        <!--&lt;!&ndash;browse CT population &ndash;&gt;-->
+        <!--<action name="browseCTpopulation" class="action.BrowseCTPopulationAction" method="browseCTpopulation">-->
+            <!--<result name="success">/WEB-INF/content/Test/browseCT_test.jsp</result>-->
+        <!--</action>-->
+
+        <!--文件上传Action-->
+        <action name="uploadFile" class="action.UpLoadFileAction">
+            <!--配置fileUpload的拦截器-->
+            <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/png,image/gif,image/jpeg
+                    ,application/vnd.openxmlformats-officedocument.wordprocessingml.document
+                    ,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+                    ,application/octet-stream
+                    ,application/pdf
+                </param>
+                <!--上传文件最大容量200M-->
+                <param name="maximumSize">209715200</param>
+            </interceptor-ref>
+            <!--配置系统自动拦截器-->
+            <interceptor-ref name="defaultStack"/>
+            <!--动态设置Action的属性值-->
+                <!--tomcat根目录下，重启消失-->
+            <!--<param name="savePath">/uploadFiles</param>-->
+                <!--本地文件夹下，重启不消失-->
+            <param name="savePath">E:\创新实践\uploadFiles</param>
+            <!--配置struts 2默认的视图页面-->
+            <result name="input">/WEB-INF/content/Test/fail.jsp</result>
+            <result name="success">/WEB-INF/content/Test/uploadFileSuccess.jsp</result>
+        </action>
+
+        <!--数据浏览Action-->
+        <action name="browseData" class="action.BrowseChrDiePreAction" method="browseData">
+            <result name="success">/WEB-INF/content/Test/browse_test_result.jsp</result>
+            <result name="fail">/WEB-INF/content/Test/browse_test_fail.jsp</result>
+        </action>
+
+        <!--Browse-->
+        <!--<action name="browse" class="action.BrowseAction" method="browse">-->
+            <!--<result name="success">/WEB-INF/content/Test/browse_test_result.jsp</result>-->
+            <!--<result name="none">/WEB-INF/content/Test/browse_test_fail.jsp</result>-->
+        <!--</action>-->
+    </package>
+    <package name="Ajax" extends="json-default" namespace="/Browse">
+        <action name="browseAjax" class="action.BrowseAction" method="browse">
+            <result type="json">
+                <param name="excludeNullProperties">true</param>
+            </result>
+        </action>
+    </package>
+
+</struts>

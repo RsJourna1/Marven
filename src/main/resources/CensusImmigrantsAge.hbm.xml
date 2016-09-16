@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusImmigrantsAge" table="census_immigrants_age" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusImmigrantsAgePK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlPopTimeImmi" column="TlPop_TimeImmi"/>
+        <property name="under5YImiPop" column="Under5YImiPop"/>
+        <property name="imi5_14YPop" column="5_14YImiPop"/>
+        <property name="imi15_24YPop" column="15_24YImiPop"/>
+        <property name="imi2544YPop" column="25_44YImiPop"/>
+        <property name="over45ImiPop" column="Over45ImiPop"/>
+    </class>
+</hibernate-mapping>

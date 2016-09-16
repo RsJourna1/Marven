@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.NeighborhoodDiabetesPrevalence" table="neighborhood_diabetes_prevalence" schema="chronic">
+        <composite-id mapped="true" class="com.entity.NeighborhoodDiabetesPrevalencePK">
+            <key-property name="ctDiaYear" column="CT_Dia_year"/>
+            <key-property name="ndId" column="Nd_id"/>
+        </composite-id>
+        <property name="b_Age20Pop" column="B_Age20Pop"/>
+        <property name="b_Age20PopDia" column="B_Age20PopDia"/>
+        <property name="b_Age20Pre" column="B_Age20Pre"/>
+        <property name="b_Age20StdPre" column="B_Age20StdPre"/>
+        <property name="f_Age20Pop" column="F_Age20Pop"/>
+        <property name="f_Age20PopDia" column="F_Age20PopDia"/>
+        <property name="f_Age20Pre" column="F_Age20Pre"/>
+        <property name="f_Age20StdPre" column="F_Age20StdPre"/>
+        <property name="m_Age20Pop" column="M_Age20Pop"/>
+        <property name="m_Age20PopDia" column="M_Age20PopDia"/>
+        <property name="m_Age20Pre" column="M_Age20Pre"/>
+        <property name="m_Age20StdPre" column="M_Age20StdPre"/>
+        <property name="b_Age2044Pop" column="B_Age20_44Pop"/>
+        <property name="b_Age2044PopDia" column="B_Age20_44PopDia"/>
+        <property name="b_Age2044Pre" column="B_Age20_44Pre"/>
+        <property name="f_Age2044Pop" column="F_Age20_44Pop"/>
+        <property name="f_Age2044PopDia" column="F_Age20_44PopDia"/>
+        <property name="f_Age2044Pre" column="F_Age20_44Pre"/>
+        <property name="m_Age2044Pop" column="M_Age20_44Pop"/>
+        <property name="m_Age2044PopDia" column="M_Age20_44PopDia"/>
+        <property name="m_Age2044Pre" column="M_Age20_44Pre"/>
+        <property name="b_Age4564Pop" column="B_Age45_64Pop"/>
+        <property name="b_Age4564PopDia" column="B_Age45_64PopDia"/>
+        <property name="b_Age4564Pre" column="B_Age45_64Pre"/>
+        <property name="f_Age4564Pop" column="F_Age45_64Pop"/>
+        <property name="f_Age4564PopDia" column="F_Age45_64PopDia"/>
+        <property name="f_Age4564Pre" column="F_Age45_64Pre"/>
+        <property name="m_Age4564Pop" column="M_Age45_64Pop"/>
+        <property name="m_Age4564PopDia" column="M_Age45_64PopDia"/>
+        <property name="m_Age4564Pre" column="M_Age45_64Pre"/>
+        <property name="b_Age65Pop" column="B_Age65Pop"/>
+        <property name="b_Age65PopDia" column="B_Age65PopDia"/>
+        <property name="b_Age65Pre" column="B_Age65Pre"/>
+        <property name="f_Age65Pop" column="F_Age65Pop"/>
+        <property name="f_Age65PopDia" column="F_Age65PopDia"/>
+        <property name="f_Age65Pre" column="F_Age65Pre"/>
+        <property name="m_Age65Pop" column="M_Age65Pop"/>
+        <property name="m_Age65PopDia" column="M_Age65PopDia"/>
+        <property name="m_Age65Pre" column="M_Age65Pre"/>
+        <property name="b_Age6584Pop" column="B_Age65_84Pop"/>
+        <property name="b_Age6584PopDia" column="B_Age65_84PopDia"/>
+        <property name="b_Age6584Pre" column="B_Age65_84Pre"/>
+        <property name="f_Age6584Pop" column="F_Age65_84Pop"/>
+        <property name="f_Age6584PopDia" column="F_Age65_84PopDia"/>
+        <property name="f_Age6584Pre" column="F_Age65_84Pre"/>
+        <property name="m_Age6584Pop" column="M_Age65_84Pop"/>
+        <property name="m_Age6584PopDia" column="M_Age65_84PopDia"/>
+        <property name="m_Age6584Pre" column="M_Age65_84Pre"/>
+        <property name="b_Age85Pop" column="B_Age85Pop"/>
+        <property name="b_Age85PopDia" column="B_Age85PopDia"/>
+        <property name="b_Age85Pre" column="B_Age85Pre"/>
+        <property name="f_Age85Pop" column="F_Age85Pop"/>
+        <property name="f_Age85PopDia" column="F_Age85PopDia"/>
+        <property name="f_Age85Pre" column="F_Age85Pre"/>
+        <property name="m_Age85Pop" column="M_Age85Pop"/>
+        <property name="m_Age85PopDia" column="M_Age85PopDia"/>
+        <property name="m_Age85Pre" column="M_Age85Pre"/>
+    </class>
+</hibernate-mapping>

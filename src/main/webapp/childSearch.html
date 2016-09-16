@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>search</title>
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/chosen/chosen.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			.btn-ok {
+				margin: auto 297px;
+			}
+		</style>
+
+	</head>
+
+	<body class="gray-bg">
+
+		<div class="col-sm-5">
+
+			<div class="ibox-content">
+				<h3>
+                                Geography
+                            </h3>
+
+				<div class="form-group">
+					<label class="font-noraml">Geography level</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="cID" hassubinfo="true">cID</option>
+                                    <option value="nID" hassubinfo="true">nID</option>
+                                    <option value="nName" hassubinfo="true">nName</option>
+                        </select>
+					</div>
+				</div>
+
+				<h3>
+                               Chronic Disease
+                            </h3>
+
+				<div class="form-group">
+					<label class="font-noraml">Diabetes</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="Y07Prev" hassubinfo="true">Y07Prev</option>
+                                    <option value="Y11Prev" hassubinfo="true">Y11Prev</option>
+                                    <option value="Y12Prev" hassubinfo="true">Y12Prev</option>
+                                    <option value="Y07PrevCensusAge" hassubinfo="true">Y07PrevCensusAge</option>
+                                    <option value="Y11PrevCensusAge" hassubinfo="true">Y11PrevCensusAge</option>
+                                    <option value="Y12PrevCensusAge" hassubinfo="true">Y12PrevCensusAge</option>
+                                    <option value="Y07PrevCensus20-44" hassubinfo="true">Y07PrevCensus20-44</option>
+                                    <option value="Y07PrevCensus45-64" hassubinfo="true">Y07PrevCensus45-64</option>
+                                    <option value="Y07PrevCensus65+" hassubinfo="true">Y07PrevCensus65+</option>
+                                    <option value="Y11PrevCensus20-44" hassubinfo="true">Y11PrevCensus20-44</option>
+                                    <option value="Y11PrevCensus45-64" hassubinfo="true">Y11PrevCensus45-64</option>
+                                    <option value="Y11PrevCensus65+" hassubinfo="true">Y11PrevCensus65+</option>
+                                    <option value="Y12PrevCensus20-44" hassubinfo="true">Y12PrevCensus20-44</option>
+                                    <option value="Y12PrevCensus45-64" hassubinfo="true">Y12PrevCensus45-64</option>
+                                    <option value="Y12PrevCensus65+" hassubinfo="true">Y12PrevCensus65+</option>                                    
+                        </select>
+					</div>
+				</div>
+				<h3>
+                                Demographic profiles
+                            </h3>
+
+				<div class="form-group">
+					<label class="font-noraml">Population</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PopNum" hassubinfo="true">PopNum</option>
+                                    <option value="PopDensity" hassubinfo="true">PopDensity</option>                                    
+                        </select>
+					</div><br />
+					<label class="font-noraml">Sex</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="Male" hassubinfo="true">Male</option>
+                                    <option value="Female" hassubinfo="true">Female</option>                                    
+                        </select>
+					</div><br />
+					<label class="font-noraml">Age</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="MedianAge" hassubinfo="true">MedianAge</option>
+                                    <option value="MedianAge20+" hassubinfo="true">MedianAge20+</option>                                    
+                                    <option value="Age45" hassubinfo="true">Age45</option>
+                                    <option value="Age65" hassubinfo="true">Age65</option>
+                        </select>
+					</div><br />
+					<label class="font-noraml">Ethnicity</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="EthnicityChinese" hassubinfo="true">EthnicityChinese</option>
+                                    <option value="EthnicitySouthAsian" hassubinfo="true">EthnicitySouthAsian</option>                                    
+                                    <option value="EthnicityBlack" hassubinfo="true">EthnicityBlack</option>
+                                    <option value="EthnicityFilipino" hassubinfo="true">EthnicityFilipino</option>
+                                    <option value="EthnicityLatinAmerican" hassubinfo="true">EthnicityLatinAmerican</option>
+                                    <option value="EthnicitySoutheastAsian" hassubinfo="true">EthnicitySoutheastAsian</option>                                    
+                                    <option value="EthnicityArab" hassubinfo="true">EthnicityArab</option>
+                                    <option value="EthnicityWestAsian" hassubinfo="true">EthnicityWestAsian</option>
+                                    <option value="EthnicityKorean" hassubinfo="true">EthnicityKorean</option>                                    
+                                    <option value="Ethnicity5HighRisk" hassubinfo="true">Ethnicity5HighRisk</option>                                   
+                                    <option value="PercentVisibleMinority" hassubinfo="true">PercentVisibleMinority</option>
+                        </select>
+					</div><br />
+					<h3>
+                               Lifestyle
+                            </h3>
+
+					<div class="form-group">
+						<label class="font-noraml">Commuting</label>
+						<div class="input-group">
+							<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentDriving" hassubinfo="true">PercentDriving</option>
+                        </select>
+						</div>
+					</div>
+				</div>
+				<h3>
+                               Socio-economic status
+                            </h3>
+
+				<div class="form-group">
+					<label class="font-noraml">Immigrant status</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentImmigrant" hassubinfo="true">PercentImmigrant</option>
+                                    <option value="PercentImmigrant5Years" hassubinfo="true">PercentImmigrant5Years</option>
+                                    <option value="PercentImmigrant10Years" hassubinfo="true">PercentImmigrant10Years</option>
+                                    <option value="PercentImmigrant20Years" hassubinfo="true">PercentImmigrant20Years</option>                                    
+                        </select>
+					</div><br />
+
+					<label class="font-noraml">Income</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentImmigrant" hassubinfo="true">MedianIncome</option>
+                                    <option value="PercentImmigrant5Years" hassubinfo="true">PercentWithoutIncome</option>
+                                    <option value="PercentImmigrant10Years" hassubinfo="true">PercentBelowLIM-Urban</option>
+                                    <option value="PercentImmigrant20Years" hassubinfo="true">PercentBelowLIM-NHS</option>                                    
+                        </select>
+					</div><br />
+
+					<label class="font-noraml">Education attainment</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentWithoutPostsecondaryDegree" hassubinfo="true">PercentWithoutPostsecondaryDegree</option>                                 
+                        </select>
+					</div><br />
+
+					<label class="font-noraml">Marital status</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentLoneParent" hassubinfo="true">PercentLoneParent</option>                                 
+                                    <option value="PercentLoneFemaleParent" hassubinfo="true">PercentLoneFemaleParent</option>
+                                    <option value="PercentLoneMaleParent" hassubinfo="true">PercentLoneMaleParent</option>                                   
+                        </select>
+					</div><br />
+
+					<label class="font-noraml">Occupation</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentSalesService" hassubinfo="true">PercentSalesService</option>                                 
+                                    <option value="PercentAgricultureForestryMining" hassubinfo="true">PercentAgricultureForestryMining</option>                                   
+                        </select>
+					</div>
+				</div>
+				<h3>
+                                Environment
+                            </h3>
+
+				<div class="form-group">
+					<label class="font-noraml">Amenties for physical activities</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="GreenPlaces" hassubinfo="true">GreenPlaces</option>
+                                    <option value="WalkScore" hassubinfo="true">WalkScore</option>                                    
+                                    <option value="TransitScore" hassubinfo="true">TransitScore</option>
+                        </select>
+					</div><br />
+					<label class="font-noraml">Social environment</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentVoting" hassubinfo="true">PercentVoting</option>
+                                    <option value="MarginalizationIndex" hassubinfo="true">MarginalizationIndex</option>                                    
+                        </select>
+					</div><br />
+					<label class="font-noraml">Air conditions</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="Traffic volume" hassubinfo="true">Traffic volume</option>
+                                    <option value="Pollutants" hassubinfo="true">Pollutants</option>
+                                    <option value="PollutantCTEP" hassubinfo="true">PollutantCTEP</option>
+                                    <option value="PollutantNCTEP" hassubinfo="true">PollutantNCTEP</option>
+                                    <option value="NumChemicalFacilities" hassubinfo="true">NumChemicalFacilities</option>
+                                    <option value="EmissionNOx" hassubinfo="true">EmissionNOx</option>
+                                    <option value="EmissionPM25" hassubinfo="true">EmissionPM25</option>
+                                    <option value="EmissionVOCs" hassubinfo="true">EmissionVOCs</option>
+                                    <option value="NumGasStations" hassubinfo="true">NumGasStations</option>                                    
+                        </select>
+					</div><br />
+					<label class="font-noraml">Water</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="TConcentrationLead" hassubinfo="true">ConcentrationLead</option>                                    
+                        </select>
+					</div><br />
+					<label class="font-noraml">Health care</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="NumCareProvider" hassubinfo="true">NumCareProvider</option>                                    
+                                    <option value="NumCareProvider" hassubinfo="true">NumDiabetesEducationProgram</option>
+                        </select>
+					</div><br />
+					<label class="font-noraml">Crime</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="NumRobberyCases10" hassubinfo="true">NumRobberyCases10</option>                                    
+                                    <option value="NumRobberyCases11" hassubinfo="true">NumRobberyCases11</option>
+                                    <option value="AvgNumRobberyCases11" hassubinfo="true">AvgNumRobberyCases11</option>
+                        </select>
+					</div><br />
+					<label class="font-noraml">Soil&Land use</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="SoilRadonPotential" hassubinfo="true">SoilRadonPotential</option>                                    
+                                    <option value="TreeCover" hassubinfo="true">TreeCover</option>                                   
+                        </select>
+					</div><br />
+					<label class="font-noraml">Housing&Dwelling</label>
+					<div class="input-group">
+						<select data-placeholder="Indicators" class="chosen-select my-multiple-chosen" id="chosen-select my-multiple-chosen-2 my-multiple" multiple style="width:350px;" tabindex="4">
+                                    <option value="Select" disabled="disabled">Indicators</option>
+                                    <option value="PercentDwellingBefore1990" hassubinfo="true">PercentDwellingBefore1990</option>                                    
+                                    <option value="PercentDwellingNeedMajorRepairs" hassubinfo="true">PercentDwellingNeedMajorRepairs</option>
+                                    <option value="Social Housing Units08/11" hassubinfo="true">Social Housing Units08/11</option>                                    
+                                    <option value="Social Housing Waiting List08/11" hassubinfo="true">Social Housing Waiting List08/11</option>  
+                        </select>
+					</div>
+					<button type="button" class="btn btn-primary btn-ok" id="my-btn-ok" onclick="appendAll()">+OK</button>
+				</div>
+
+			</div>
+
+			<!-- 全局js -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<!-- Chosen -->
+			<script src="js/chosen.jquery.js"></script>
+			<script src="js/myChose.js"></script>
+			<script type="text/javascript">
+				function appendAll() {
+					var index = 'hhh';
+					for (var i = 0; i < $(".my-multiple-chosen").length; i++) {
+						console.log($(".my-multiple-chosen").eq(i).val());
+						var good = $(".my-multiple-chosen").eq(i).val();
+						//console.log(parent.$("#dl_result").text());
+						if (good != null) {
+							var goods = good.toString().split(",");
+							for (var j = 0; j < goods.length; j++) {
+								//console.log(goods[j]);
+								//console.log(parent.$("#dl_result").text());
+								if(parent.$("#dl_result").text().indexOf(goods[j]) == -1){
+									parent.$("#dl_result").append("<dd id='select_" + index + "' class='selected' onclick=removeChose($(this),'" + index + "')><a href='#'>" + goods[j] + "</a></dd>");
+								}
+									
+							}
+						}
+					}
+					getResult();
+					
+				}
+
+
+
+				function getResult() { //结果处理
+					var len_chose = parent.$("#dl_result").children(".selected").length;
+					if (len_chose > 0) { //若是筛选区域选中项大于0
+						parent.$(".select-no").hide(); //暂时没有选择过滤条件 隐藏
+					} else {
+						parent.$(".select-no").show(); //暂时没有选择过滤条件 显示
+					}
+				}
+			</script>
+	</body>
+
+</html>

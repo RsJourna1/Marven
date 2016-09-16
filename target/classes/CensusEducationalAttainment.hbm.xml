@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusEducationalAttainment" table="census_educational_attainment" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusEducationalAttainmentPK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlAgeOver15EducatedPop" column="TlAgeOver15Educated_Pop"/>
+        <property name="notEduAgeOver15Exp" column="NotEduAgeOver15Exp"/>
+        <property name="highschDipOrEqulA15" column="Highsch_DipOrEqulA15"/>
+        <property name="postsecCerDipDegA15" column="Postsec_CerDipDegA15"/>
+        <property name="apprenTradeCerDipA15" column="ApprenTrade_CerDipA15"/>
+        <property name="collCegepNonUniCerDipA15" column="CollCEGEPNonUni_CerDipA15"/>
+        <property name="uniCerBelowBachelorA15" column="Uni_Cer_BelowBachelorA15"/>
+        <property name="uniCerDipDegBachelorA15" column="Uni_CerDipDeg_BachelorA15"/>
+        <property name="bachelorDegA15" column="Bachelor_DegA15"/>
+        <property name="uniCerDipDegAboBachelorA15" column="Uni_CerDipDeg_AboBachelorA15"/>
+        <property name="tlAge2564EducatedPop" column="TlAge25_64Educated_Pop"/>
+        <property name="notEduAge2564Exp" column="NotEduAge25_64Exp"/>
+        <property name="highschDipOrEqulA2564" column="Highsch_DipOrEqulA25_64"/>
+        <property name="postsecCerDipDegA2564" column="Postsec_CerDipDegA25_64"/>
+        <property name="apprenTradeCerDipA2564" column="ApprenTrade_CerDipA25_64"/>
+        <property name="collCegepNonUniCerDipA2564" column="CollCEGEPNonUni_CerDipA25_64"/>
+        <property name="uniCerBelowBachelorA2564" column="Uni_Cer_BelowBachelorA25_64"/>
+        <property name="uniCerDipDegBachelorA2564" column="Uni_CerDipDeg_BachelorA25_64"/>
+        <property name="bachelorDegA2564" column="Bachelor_DegA25_64"/>
+        <property name="uniCerDipDegAboBachelorA2564" column="Uni_CerDipDeg_AboBachelorA25_64"/>
+    </class>
+</hibernate-mapping>

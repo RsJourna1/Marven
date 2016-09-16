@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.entity.CensusMaritalStatus" table="census_marital_status" schema="chronic">
+        <composite-id mapped="true" class="com.entity.CensusMaritalStatusPK">
+            <key-property name="ctId" column="CT_id"/>
+            <key-property name="ctYear" column="CT_year"/>
+        </composite-id>
+        <property name="tlAgeOver15MaritStatPop" column="TlAgeOver15MaritStatPop"/>
+        <property name="marriedOrWithLawO15YPartner" column="MarriedOrWithLawO15YPartner"/>
+        <property name="marriedNotSeparatedO15Y" column="Married_NotSeparatedO15Y"/>
+        <property name="livingComLawO15Y" column="LivingComLawO15Y"/>
+        <property name="unmarriedNoLawPartberO15Y" column="Unmarried_NoLawPartberO15Y"/>
+        <property name="singleNomarriedExpO15Y" column="SingleNomarriedExpO15Y"/>
+        <property name="separatedO15Y" column="SeparatedO15Y"/>
+        <property name="divorcedO15Y" column="DivorcedO15Y"/>
+        <property name="widowedO15Y" column="WidowedO15Y"/>
+    </class>
+</hibernate-mapping>
