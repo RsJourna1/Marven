@@ -45,7 +45,6 @@
 //                var params = {
 //                    selectedOption: "2.1.1.1",
 //                    dataYear: "2006"
-//                    pagerModel: {pageNo: 1, pageSize: 10},
 //                };
                 $.ajax({
                     type: "POST",
