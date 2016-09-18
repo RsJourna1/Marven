@@ -21,16 +21,21 @@
                 url: requestUrl,
                 dataType: "json", //ajax返回值设置为text（json格式也可用它返回，可打印出结果，也可设置成json）
                 success: function (json) {
-                    console.log("json :");console.log(json);
                     var obj = eval(json);  //使用这个方法解析json
-                    console.log("obj :");console.log(obj);
                     var pagerModel = obj.pagerModel;  //pagerModel是和action中定义的result变量的get方法对应的
-                    console.log("obj.pagerModel :");console.log(pagerModel);
+                    console.log("obj.pagerModel :");
+                    console.log(pagerModel);
 
-                    console.log("pagerModel.resultData :");console.log(pagerModel.resultData);
-                    console.log("pagerModel.pageNo :");console.log(pagerModel.pageNo);
-                    console.log("pagerModel.pageSize :");console.log(pagerModel.pageSize);
-                    console.log("pagerModel.nextPage :");console.log(pagerModel.nextPageNo);
+                    appendTable(pagerModel.resultData);
+
+                    console.log("pagerModel.resultData :");
+                    console.log(pagerModel.resultData);
+                    console.log("pagerModel.pageNo :");
+                    console.log(pagerModel.pageNo);
+                    console.log("pagerModel.pageSize :");
+                    console.log(pagerModel.pageSize);
+                    console.log("pagerModel.nextPage :");
+                    console.log(pagerModel.nextPageNo);
                 },
                 error: function (json) {
                     alert("ERROR! json=" + json);
@@ -53,16 +58,22 @@
 //                    data: params,
                     dataType: "json", //ajax返回值设置为text（json格式也可用它返回，可打印出结果，也可设置成json）
                     success: function (json) {
-                        console.log("json :");console.log(json);
                         var obj = eval(json);  //使用这个方法解析json
-                        console.log("obj :");console.log(obj);
                         var pagerModel = obj.pagerModel;  //pagerModel是和action中定义的result变量的get方法对应的
-                        console.log("obj.pagerModel :");console.log(pagerModel);
+                        console.log("obj.pagerModel :");
+                        console.log(pagerModel);
 
-                        console.log("pagerModel.resultData :");console.log(pagerModel.resultData);
-                        console.log("pagerModel.pageNo :");console.log(pagerModel.pageNo);
-                        console.log("pagerModel.pageSize :");console.log(pagerModel.pageSize);
-                        console.log("pagerModel.nextPage :");console.log(pagerModel.nextPageNo);
+                        appendTable(pagerModel.resultData);
+
+                        console.log("pagerModel.resultData :");
+                        console.log(pagerModel.resultData);
+                        console.log("pagerModel.pageNo :");
+                        console.log(pagerModel.pageNo);
+                        console.log("pagerModel.pageSize :");
+                        console.log(pagerModel.pageSize);
+                        console.log("pagerModel.nextPage :");
+                        console.log(pagerModel.nextPageNo);
+
                     },
                     error: function (json) {
                         alert("ERROR! json=" + json);
@@ -71,6 +82,40 @@
                 });
             });
         });
+
+        //表格动态生成
+        var headArray = [];
+
+        function parseHead(oneRow) {
+            for (var i in oneRow) {
+                headArray[headArray.length] = i;
+            }
+        }
+
+        function appendTable(resultData) {
+            var respondArray = resultData;
+            parseHead(respondArray[0]);
+            var tableAutoAppend = document.getElementById("tableAutoAppend");
+            var table = document.createElement("table");
+            var thead = document.createElement("tr");
+            for (var count = 0; count < headArray.length; count++) {
+                var td = document.createElement("td");
+                td.innerHTML = headArray[count];
+                thead.appendChild(td);
+            }
+            table.appendChild(thead);
+            for (var tableRowNo = 0; tableRowNo < respondArray.length; tableRowNo++) {
+                var tr = document.createElement("tr");
+                for (var headCount = 0; headCount < headArray.length; headCount++) {
+                    var cell = document.createElement("td");
+                    cell.innerHTML = respondArray[tableRowNo][headArray[headCount]];
+                    tr.appendChild(cell);
+                }
+                table.appendChild(tr);
+            }
+            tableAutoAppend.appendChild(table);
+        }
+
     </script>
 </head>
 <%
@@ -78,6 +123,7 @@
     String dataYear = request.getParameter("dataYear");
 %>
 <body>
-<input type="button" value="Page 2" id="tj">
+    <div id="tableAutoAppend"></div>
+    <input type="button" value="Page 2" id="tj">
 </body>
 </html>
