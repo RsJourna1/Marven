@@ -69,7 +69,6 @@
 
         //表格动态生成
         var headArray = [];
-
         function parseHead(oneRow) {
             for (var i in oneRow) {
                 headArray[headArray.length] = i;

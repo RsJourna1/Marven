@@ -16,7 +16,8 @@
         <!--<welcome-file>uploadFile_test.jsp</welcome-file>-->
         <!--<welcome-file>Data.html</welcome-file>-->
         <!--<welcome-file>browse_test_Request.jsp</welcome-file>-->
-        <welcome-file>ajaxTest.jsp</welcome-file>
+        <!--<welcome-file>ajaxTest.jsp</welcome-file>-->
+        <welcome-file>ajaxDataBrowse.jsp</welcome-file>
     </welcome-file-list>
 
     <filter>
