@@ -14,6 +14,6 @@
     <script src="js/plugins/jqueryPagination/jquery.pagination.js" type="text/javascript"></script>
 </head>
 <body>
-
+    <div id="pagePagination"></div>
 </body>
 </html>
