@@ -14,39 +14,39 @@
     <script type="text/javascript" src="js/plugins/jqueryPagination/jquery.pagination.js"/>
     <script type="text/javascript"></script>
     <script type="text/javascript">
-        $(function () {
+        function firstLoadData() {
             var requestUrl = "Browse/browseAjax.action?selectedOption=2.1.1.1&dataYear=2006&pagerModel.pageNo=1&pagerModel.pageSize=10";
             $.ajax({
                 type: "POST",
                 url: requestUrl,
                 dataType: "json", //ajax返回值设置为text（json格式也可用它返回，可打印出结果，也可设置成json）
                 success: function (json) {
-                    console.log("json :");console.log(json);
                     var obj = eval(json);  //使用这个方法解析json
-                    console.log("obj :");console.log(obj);
                     var pagerModel = obj.pagerModel;  //pagerModel是和action中定义的result变量的get方法对应的
-                    console.log("obj.pagerModel :");console.log(pagerModel);
+                    console.log("obj.pagerModel :");
+                    console.log(pagerModel);
 
-                    console.log("pagerModel.resultData :");console.log(pagerModel.resultData);
-                    console.log("pagerModel.pageNo :");console.log(pagerModel.pageNo);
-                    console.log("pagerModel.pageSize :");console.log(pagerModel.pageSize);
-                    console.log("pagerModel.nextPage :");console.log(pagerModel.nextPageNo);
+                    appendTable(pagerModel.resultData);
+
+                    console.log("pagerModel.resultData :");
+                    console.log(pagerModel.resultData);
+                    console.log("pagerModel.pageNo :");
+                    console.log(pagerModel.pageNo);
+                    console.log("pagerModel.pageSize :");
+                    console.log(pagerModel.pageSize);
+                    console.log("pagerModel.nextPage :");
+                    console.log(pagerModel.nextPageNo);
                 },
                 error: function (json) {
                     alert("ERROR! json=" + json);
                     return false;
                 }
             });
-        });
+        }
         $(function () {
             var requestUrl = "Browse/browseAjax.action?selectedOption=2.1.1.1&dataYear=2006&pagerModel.pageNo=2&pagerModel.pageSize=10";
             $("#tj").click(function () {
-                //提交的参数，name和inch是和struts action中对应的接收变量
-//                var params = {
-//                    selectedOption: "2.1.1.1",
-//                    dataYear: "2006"
-//                    pagerModel: {pageNo: 1, pageSize: 10},
-//                };
+                $("#tableAutoAppend").remove("table");
                 $.ajax({
                     type: "POST",
                     url: requestUrl,
@@ -54,16 +54,12 @@
 //                    data: params,
                     dataType: "json", //ajax返回值设置为text（json格式也可用它返回，可打印出结果，也可设置成json）
                     success: function (json) {
-                        console.log("json :");console.log(json);
                         var obj = eval(json);  //使用这个方法解析json
-                        console.log("obj :");console.log(obj);
                         var pagerModel = obj.pagerModel;  //pagerModel是和action中定义的result变量的get方法对应的
-                        console.log("obj.pagerModel :");console.log(pagerModel);
-
-                        console.log("pagerModel.resultData :");console.log(pagerModel.resultData);
-                        console.log("pagerModel.pageNo :");console.log(pagerModel.pageNo);
-                        console.log("pagerModel.pageSize :");console.log(pagerModel.pageSize);
-                        console.log("pagerModel.nextPage :");console.log(pagerModel.nextPageNo);
+                        console.log("obj.pagerModel :");
+                        console.log(pagerModel);
+//                        var deleteContent = document.getElementById("tableAutoAppend");
+                        appendTable(pagerModel.resultData);
                     },
                     error: function (json) {
                         alert("ERROR! json=" + json);
@@ -72,13 +68,48 @@
                 });
             });
         });
+
+        //表格动态生成
+        var headArray = [];
+
+        function parseHead(oneRow) {
+            for (var i in oneRow) {
+                headArray[headArray.length] = i;
+            }
+        }
+
+        function appendTable(resultData) {
+            var respondArray = resultData;
+            parseHead(respondArray[0]);
+            var tableAutoAppend = document.getElementById("tableAutoAppend");
+            var table = document.createElement("table");
+            var thead = document.createElement("tr");
+            for (var count = 0; count < headArray.length; count++) {
+                var td = document.createElement("td");
+                td.innerHTML = headArray[count];
+                thead.appendChild(td);
+            }
+            table.appendChild(thead);
+            for (var tableRowNo = 0; tableRowNo < respondArray.length; tableRowNo++) {
+                var tr = document.createElement("tr");
+                for (var headCount = 0; headCount < headArray.length; headCount++) {
+                    var cell = document.createElement("td");
+                    cell.innerHTML = respondArray[tableRowNo][headArray[headCount]];
+                    tr.appendChild(cell);
+                }
+                table.appendChild(tr);
+            }
+            tableAutoAppend.appendChild(table);
+        }
+
     </script>
 </head>
 <%
     String selectedOption = request.getParameter("selectedOption");
     String dataYear = request.getParameter("dataYear");
 %>
-<body>
-<input type="button" value="Page 2" id="tj">
+<body onload="firstLoadData();">
+    <div id="tableAutoAppend"></div>
+    <input type="button" value="Page 2" id="tj">
 </body>
 </html>
